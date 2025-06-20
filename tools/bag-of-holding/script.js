@@ -14,9 +14,15 @@ function displayMagicItems(items) {
     container.innerHTML = ''; // Clear previous items
 
     items.forEach(item => {
-        const p = document.createElement('p');
-        p.textContent = item.name;
-        container.appendChild(p);
+        const div = document.createElement('div');
+        const name = document.createElement('h3');
+        const desc = document.createElement('p');
+
+        name.textContent = item.name;
+        desc.textContent = item.desc || 'No description available.';
+        div.appendChild(name);
+        div.appendChild(desc);
+        container.appendChild(div);
     });
 }
 
