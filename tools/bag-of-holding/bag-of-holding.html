@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bag of Holding</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/../style.css">
 </head>
 <body>
     <h1>Bag of Holding</h1>
@@ -21,12 +21,9 @@
         <button type="submit">Generate Item</button>
     </form>
     <div id="itemResult"></div>
-    <script>
-        document.getElementById('itemForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const itemType = document.getElementById('itemType').value;
-            const itemResult = document.getElementById('itemResult');
-            itemResult.innerHTML = `You generated a random ${itemType}!`;
-        });
-    </script>
+    <h2>🎒 Bag of Holding</h2>
+    <p>Here are some randomly drawn magical items from the 5e SRD:</p>
+    <ul id="magic-items"></ul>
+    <button onclick="reloadMagicItems()">Draw Again</button>
+    <script src="/tools/bag-of-holding/script.js"></script>
 </html>
