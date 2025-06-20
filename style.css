@@ -23,6 +23,32 @@ h1 {
   margin: 2rem auto;
 }
 
+nav {
+  background: #fef9f0;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  border-bottom: 1px solid #dbc6a3;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  font-family: 'Georgia', serif;
+  border-radius: 0 0 12px 12px;
+}
+
+nav a {
+  color: #3e3e3e;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #f0e4d0;
+  color: #2b2b2b;
+}
 .tool {
   background-color: #fffaf0;
   border: 1px solid #ccc;
