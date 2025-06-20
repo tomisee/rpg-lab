@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag of Holding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bag of Holding</h1>
+    <p>Generate random items for your RPG game.</p>
+    <form id="itemForm">
+        <label for="itemType">Select Item Type:</label>
+        <select id="itemType" name="itemType">
+            <option value="weapon">Weapon</option>
+            <option value="armor">Armor</option>
+            <option value="potion">Potion</option>
+            <option value="scroll">Scroll</option>
+            <option value="misc">Miscellaneous</option>
+        </select>
+        <button type="submit">Generate Item</button>
+    </form>
+    <div id="itemResult"></div>
+    <script>
+        document.getElementById('itemForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const itemType = document.getElementById('itemType').value;
+            const itemResult = document.getElementById('itemResult');
+            itemResult.innerHTML = `You generated a random ${itemType}!`;
+        });
+    </script>
+</html>
